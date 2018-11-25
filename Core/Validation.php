@@ -250,4 +250,9 @@ class Validation
     {
         return array_key_exists($inputName, $this->errors);
     }
+
+    //TODO
+    /**
+     * Determine if the given ids is exist in database table
+     */
 }

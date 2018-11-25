@@ -174,14 +174,19 @@ class Product extends AbstractModel
      */
     public function update(int $id)
     {
-        $this->data('title', $this->request->post('title'))
-            ->data('description', $this->request->post('details'))
-            ->data('user_id', get_user_id_from_token())
-            ->where('id=?', $id)
-            ->update($this->table);
+        if ($this->exists($id)) {
+            $this->data('title', $this->request->post('title'))
+                ->data('description', $this->request->post('details'))
+                ->data('user_id', get_user_id_from_token())
+                ->where('id=?', $id)
+                ->update($this->table);
 
-        $this->sync($id, $this->request->post('categories'));
+            $this->sync($id, $this->request->post('categories'));
 
-        return $this->getOne($id);
+            return $this->getOne($id);
+
+        } else {
+            return null;
+        }
     }
 }
