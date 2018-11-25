@@ -15,7 +15,7 @@ class RegisterTest extends AbstractTestCase
         $url = self::BASE_URI . '/register';
         $payload = [
             'name' => 'Test User',
-            'email' => 'testuser'. rand(0,100) .'@test.com',
+            'email' => 'testuser'. mt_rand() .'@test.com',
             'password' => 'testPassword',
             'password_confirmation' => 'testPassword',
         ];

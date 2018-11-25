@@ -26,6 +26,12 @@
     "scripts": {
         "pre-install-cmd": [
             "php -r \"copy('resources/config-example.php', 'resources/config.php');\""
+        ],
+        "test" : [
+            "php vendor/phpunit/phpunit/phpunit"
+        ],
+        "create_db_schema_and_insert_demo_data": [
+            "@php resources/create_db_schema_and_insert_demo_data.php"
         ]
     }
 }

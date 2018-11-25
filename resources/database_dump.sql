@@ -152,36 +152,6 @@ INSERT INTO `category_product` (`id`, `product_id`, `category_id`, `created_at`,
 	(96, 50, 10, '2018-11-21 10:08:57', NULL, NULL);
 /*!40000 ALTER TABLE `category_product` ENABLE KEYS */;
 
--- Dumping structure for table home24.migrations
-CREATE TABLE IF NOT EXISTS `migrations` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `batch` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- Dumping data for table home24.migrations: ~5 rows (approximately)
-/*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-	(6, '2014_10_12_000000_create_users_table', 1),
-	(7, '2014_10_12_100000_create_password_resets_table', 1),
-	(8, '2018_11_10_235131_create_products_table', 1),
-	(9, '2018_11_12_115021_create_categories_table', 1),
-	(10, '2018_11_12_115100_create_category_product_table', 1);
-/*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
-
--- Dumping structure for table home24.password_resets
-CREATE TABLE IF NOT EXISTS `password_resets` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  KEY `password_resets_email_index` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- Dumping data for table home24.password_resets: ~0 rows (approximately)
-/*!40000 ALTER TABLE `password_resets` DISABLE KEYS */;
-/*!40000 ALTER TABLE `password_resets` ENABLE KEYS */;
-
 -- Dumping structure for table home24.products
 CREATE TABLE IF NOT EXISTS `products` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
