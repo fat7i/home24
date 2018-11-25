@@ -3,9 +3,9 @@ I built a framework specified for this task, I used PHP7, Mysql and [JWT (JSON W
 and finally [Composer](https://getcomposer.org/) as a package manager.
 
 ### Instructions
+- From your terminal run: `composer install` to download all packages.
 - Edit database info in `resources/config.php` file.
 - Import `resources/database.sql` into database, it's contain schema and some demo data. 
-- From your terminal run: `composer update` to download all packages.
 
 
 #### Demo Account
