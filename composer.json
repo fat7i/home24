@@ -24,7 +24,7 @@
         }
     },
     "scripts": {
-        "pre-install-cmd": [
+        "post-dependencies-solving": [
             "php -r \"copy('resources/config-example.php', 'resources/config.php');\""
         ],
         "test" : [

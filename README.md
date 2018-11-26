@@ -3,6 +3,7 @@ I built a framework specified for this task, I used PHP7, Mysql and [JWT (JSON W
 and finally [Composer](https://getcomposer.org/) as a package manager.
 
 ### Instructions
+- Clone the project `git clone https://github.com/fat7i/home24.git`.
 - Run: `composer install` to download all packages.
 - Edit database info in `resources/config.php` file.
 - Run `composer create_db_schema_and_insert_demo_data` command will create the database schema and some demo data, 
