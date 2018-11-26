@@ -49,6 +49,7 @@ trait ThrottlingTrait
 
         $this->rate_limit_limit = config('rate_limit.limit');
         $this->rate_limit_time = config('rate_limit.time');
+        $this->rate_limit_reset = time() + $this->rate_limit_time;
     }
 
     /**
@@ -113,7 +114,7 @@ trait ThrottlingTrait
      */
     private function setRateLimitsInDB(int $rate_limit_limit, int $rate_limit_remaining, int $rate_limit_reset)
     {
-        $user_id = $this->container->get('session')->session->get('id');
+        $user_id = $this->container->get('session')->get('id');
 
         $rate_limit = [
             "rate_limit_limit"     => $rate_limit_limit,
@@ -121,7 +122,7 @@ trait ThrottlingTrait
             "rate_limit_reset"     => $rate_limit_reset,
         ];
 
-        $query = $this->container->get('session')->db->pdo()->prepare('UPDATE users SET `rate_limit` = :rate_limit WHERE id = :id ');
+        $query = $this->container->get('db')->pdo()->prepare('UPDATE users SET `rate_limit` = :rate_limit WHERE id = :id ');
         $query->execute(["rate_limit" => json_encode($rate_limit), "id" => $user_id]);
     }
 
