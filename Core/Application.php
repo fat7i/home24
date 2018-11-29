@@ -8,7 +8,7 @@ use Core\Exceptions\ClassNotFoundInContainer;
  * Class Application
  * @package Core
  */
-final class Application
+class Application
 {
     /**
      * Application Container

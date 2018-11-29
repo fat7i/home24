@@ -5,7 +5,7 @@ namespace Core;
 use Closure;
 use Core\Exceptions\ClassNotFoundInContainer;
 
-final class Container
+class Container
 {
     /**
      * Container
